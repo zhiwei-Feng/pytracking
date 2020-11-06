@@ -96,12 +96,14 @@ class YouTubeVOS(VOSDatasetBase):
         if self.split.startswith("jj"):
             split_folder = "train"
 
-        dset_path = self.root / self.version / split_folder
+        #dset_path = self.root / self.version / split_folder
+        dset_path = self.root / split_folder
 
         self._anno_path = dset_path / 'Annotations'
 
         if all_frames:
-            self._jpeg_path = self.root / self.version / (split_folder + "_all_frames") / 'JPEGImages'
+            #self._jpeg_path = self.root / self.version / (split_folder + "_all_frames") / 'JPEGImages'
+            self._jpeg_path = self.root  / (split_folder + "_all_frames") / 'JPEGImages'
         else:
             self._jpeg_path = dset_path / 'JPEGImages'
 

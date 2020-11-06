@@ -197,3 +197,4 @@ def evaluate_vos(trackers, dataset='yt2019_jjval', force=False):
     print(report)
 
     return table_g_all, table_seq_all
+
